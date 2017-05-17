@@ -164,6 +164,10 @@ elseif(UNIX)
     add_definitions("-DLINUX=1")
     add_definitions("-D_POSIX_C_SOURCE=200809L")
     add_definitions("-D__cdecl=")
+    include_directories("/usr/include/x86_64-linux-gnu")
+    include_directories("/usr/include/x86_64-linux-gnu/gnu")
+    include_directories("/usr/include/x86_64-linux-gnu/c++/5")
+    add_definitions(-D__x86_64__=1)
   endif()
 
   # Mac-specific compiler flags
